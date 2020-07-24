@@ -3,7 +3,7 @@ var mostrarBaraja={
     //bucle sobre la baraja
     for(var i=0; i <baraja.length;i++){
          
-            document.getElementById('mostrarBaraja').innerHTML+=
+            document.getElementById('divBaraja').innerHTML+=
             `<img class='cartalista' src='baraja-svg/${baraja[i].imagen}'>`
     
         }

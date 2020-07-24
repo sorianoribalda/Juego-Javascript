@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juegos</title>
+    
+    <style>
+        @font-face{
+            font-family:'blackjack';
+            src:url('fonts/1942.ttf');
+        }
+        @font-face{
+            font-family:'carta';
+            src:url('fonts/cards-webfont.woff');
+        
+        }
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'blacjack';
+            padding: 2em;
+        }
+        #contanier{
+            width:90%;
+            color:pink;
+        }
+        #tapete{
+            background-color: darkgreen;
+            min-height: 500px;
+            margin:0, auto;
+            padding: 5em;
+            border: double 10px white;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+            
+        }
+        #croupier,#jugador{
+            display: inline-block;
+            height: 328px;
+            width:46%;
+            text-align: center;
+
+        }
+        h1{
+            text-align: center;
+            font-family: 'blackjack';
+            font-size: 35px;
+            padding: .5em;
+            
+        }
+        #botones {
+            min-height: 30px;
+            background: red;
+            text-align: center;
+            margin:0, auto;
+            padding: 1em;
+            background-image: url(istockphoto-1066814844-1024x1024.jpg);
+        }
+        div button{
+            height: 20px;
+            width: 80px;
+            font-family: sans-serif;
+            font-size:14px;
+            font-weight: bold;
+            background-color: black;
+            color:white;
+
+        }
+        #display{
+            background-color: black;
+            height: 50px;
+            color:white;
+            padding: 1em;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+           
+
+
+
+        }
+        @keyframes apareceCarta{
+            from{
+                top:-100px;
+                left: -900px;
+                opacity: 0;
+                transform: rotate(3400deg);
+                
+            }
+            to{
+                top:0;
+                left:0;
+                opacity: 1;
+                
+            }
+            
+        }
+        #tapete .cartaalta{
+            position: relative;
+            animation: apareceCarta;
+            animation-duration: 2s;
+            
+        }
+        .jugador1,.jugador2{
+            color:white;
+            padding: 1.5em;
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+        .cartalista{
+            width: 100px;
+        }
+        
+        
+    
+    
+    
+    </style>
+
+</head>
+<body>
+  <div id="container">
+    <h1>Carta más alta</h1>
+     <div id="botones">
+         <button id='cartaalta'type='button'>start</button>
+         <button id ='mostrarBaraja' type='button'>mostrar</button>
+     </div>
+      <div id="tapete">
+         <div id="croupier">
+            <p class="jugador1">Croupier</p>
+<!--            <img src="baraja-svg/10_of_clubs.svg">-->
+             
+         </div>
+         <div id="jugador">
+            <p class="jugador2">Jugador</p>
+<!--             <img src="baraja-svg/10_of_diamonds.svg">-->
+         </div>
+          
+      </div>
+      <div id="display">
+          ¡Juega con nosotros a la carta más alta!
+      </div>
+      <div id='mostrarBaraja'>
+          
+      </div>
+  </div>
+   <script src='biblioteca.js'></script>
+   <script src='baraja.js'></script>
+   <script src='jugador.js'></script>
+   <script src='croupier.js'></script>
+   <script src='carta-mas-alta.js'></script>
+   <script src="mostrar-baraja.js"></script>
+    
+</body>
+</html>
